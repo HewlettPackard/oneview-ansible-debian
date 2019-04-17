@@ -4,7 +4,7 @@ LABEL maintainer "Hewlett Packard Enterprise <github@hpe.com>"
 
 WORKDIR /root
 
-ENV ONEVIEW_ANSIBLE_VERSION=5.1.1
+ENV ONEVIEW_ANSIBLE_VERSION=5.3.0
 
 RUN DEBIAN_FRONTEND=noninteractive \
     apt-get update -y \
