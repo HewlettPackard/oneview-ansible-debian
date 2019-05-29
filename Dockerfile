@@ -4,7 +4,7 @@ LABEL maintainer "Hewlett Packard Enterprise <github@hpe.com>"
 
 WORKDIR /root
 
-ENV ONEVIEW_ANSIBLE_VERSION=5.1.1
+ENV ONEVIEW_ANSIBLE_VERSION=5.3.0
 
 RUN DEBIAN_FRONTEND=noninteractive \
     apt-get update -y \
@@ -12,7 +12,7 @@ RUN DEBIAN_FRONTEND=noninteractive \
     openssh-client curl \
     && apt-get clean \
     && apt-get autoremove -y \
-    && pip install pyOpenSSL ansible hpOneView \
+    && pip install pyOpenSSL ansible hpOneView==5.0.0b0 \
     && rm -rf /var/lib/apt/lists/* /tmp/* /root/.cache \
     && curl -SL https://github.com/HewlettPackard/oneview-ansible/archive/v${ONEVIEW_ANSIBLE_VERSION}.tar.gz | \
     tar xz \
