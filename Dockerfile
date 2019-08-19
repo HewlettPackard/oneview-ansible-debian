@@ -1,10 +1,10 @@
-FROM python:2.7-slim-stretch
+FROM python:3.7-slim-buster
 
 LABEL maintainer "Hewlett Packard Enterprise <github@hpe.com>"
 
 WORKDIR /root
 
-ENV ONEVIEW_ANSIBLE_VERSION=5.3.0
+ENV ONEVIEW_ANSIBLE_VERSION=5.3.1
 
 RUN DEBIAN_FRONTEND=noninteractive \
     apt-get update -y \
